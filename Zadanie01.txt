@@ -1,0 +1,59 @@
+public class Zadanie_1 {
+    
+    public class Worker
+    {
+        public String imie;
+        public String nazwisko;
+        public int wiek;
+    }
+    
+    public class Firma
+    {
+        public String name;
+        public Worker pracownik;
+        public Worker pracownik2;
+        
+        public Firma()
+        {
+            this.name ="test firmy";
+            this.pracownik = new Worker();
+            this.pracownik.imie = "IMIE 1";
+            this.pracownik.nazwisko = "Kowalski";
+            this.pracownik.wiek = 33;
+            
+            this.pracownik2 = new Worker();
+            this.pracownik2.imie = "IMIE 2";
+            this.pracownik2.nazwisko = "Nowak";
+            this.pracownik2.wiek = 43;
+        }
+        
+        public void showprac1()
+        {
+             System.out.println(this.pracownik.imie); 
+             System.out.println(this.pracownik.nazwisko); 
+             System.out.println(this.pracownik.wiek); 
+        }
+        
+        public void showprac2()
+        {
+             System.out.println(this.pracownik2.imie); 
+             System.out.println(this.pracownik2.nazwisko); 
+             System.out.println(this.pracownik2.wiek); 
+        }
+        
+    }
+    
+    Firma company = new Firma();
+ 
+
+    public static void main(String args[]) {
+        
+        Zadanie_1 zad = new Zadanie_1();
+        System.out.println(zad.company.name); 
+        System.out.println("============="); 
+        zad.company.showprac1();
+        System.out.println("============="); 
+        zad.company.showprac2();
+        System.out.println("============="); 
+    }
+}

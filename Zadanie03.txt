@@ -1,0 +1,75 @@
+    
+    
+public class Zadanie_3 {
+    
+    public class Point
+    {
+        public int x;
+        public int y;
+        
+        Point()
+        {
+            this.x = 300;
+            this.y = 320;
+        }
+        
+        void downX( int a)
+        {
+            this.x -= a;
+        }
+        
+        void downY(int a)
+        {
+            this.y -= a;
+        }
+        
+        void upX(int a)
+        {
+            this.x += a;
+        }
+        
+        void upY(int a)
+        {
+            this.y += a;
+        }
+        
+        public  void showX()
+        {
+            System.out.println("X="+this.x);
+        }
+        
+        public void showY()
+        {
+            System.out.println("X="+this.x);
+        }
+        
+        public void showPoint()
+        {
+             System.out.println("X="+this.x + " Y=" + this.y);
+        }
+        
+    }
+    
+    Point point_1 = new Point();
+ 
+
+    public static void main(String args[]) {
+        
+       Zadanie_3 zad = new Zadanie_3();
+       zad.point_1.showX();
+       zad.point_1.downX(55);
+       zad.point_1.showX();
+       zad.point_1.upX(443);
+       zad.point_1.showX();
+       
+       zad.point_1.showY();
+       zad.point_1.downY(155);
+       zad.point_1.showY();
+       zad.point_1.upY(3443);
+       zad.point_1.showY();
+       
+       zad.point_1.showPoint();
+       
+       
+    }
+}

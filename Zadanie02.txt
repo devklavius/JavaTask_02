@@ -1,0 +1,57 @@
+public class Zadanie_2 {
+    
+    public class Worker
+    {
+        public String imie;
+        public String nazwisko;
+        public int wiek;
+    }
+    
+    public class Firma
+    {
+        public String name;
+        public Worker[] prac = new Worker[4];
+        
+        String[] nazwiska = {"Kowalski","Nowak","Mak","Zygmunt","Riddle","Jeans"};
+        String[] imie = {"Jan","Marek","Pawel","Maciej","Tom","Harry"};
+        int[] wiek = {18,33,34,72,66,34,22};
+        
+        public Firma()
+        {
+            this.name = "Test Firmy";  
+            
+            for(int i = 0;i<=3;i++)
+            {
+               this.prac[i] = new Worker();
+               this.prac[i].imie = this.imie[i];
+               this.prac[i].nazwisko = this.nazwiska[i];
+               this.prac[i].wiek = this.wiek[i];
+            }
+        }
+        
+        
+        public void showprac()
+        {
+            for(int i = 0;i<=3;i++)
+            {
+                System.out.println("============"); 
+                System.out.println(this.prac[i].imie); 
+                System.out.println(this.prac[i].nazwisko); 
+                System.out.println(this.prac[i].wiek); 
+            }
+        }
+
+    }
+    
+    Firma company = new Firma();
+ 
+
+    public static void main(String args[]) {
+        
+        Zadanie_2 zad = new Zadanie_2();
+        System.out.println(zad.company.name); 
+       
+       zad.company.showprac();
+       
+    }
+}
