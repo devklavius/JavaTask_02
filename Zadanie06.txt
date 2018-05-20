@@ -1,0 +1,44 @@
+public class Zadanie_6 {
+    
+    public class P2
+    {
+        int a;
+        int b;
+        
+        P2()
+        {
+            this.a = 0;
+            this.b = 0;
+        }
+        
+        P2(int x, int y)
+        {
+            this.a = x;
+            this.b = y;
+        }
+    }
+    
+    public class P3 extends P2
+    {
+        int z;
+        
+        P3(int x,int y, int u)
+        {
+            a = x;
+            b = y;
+            this.z = u;
+        }
+    }
+    
+    
+    P3 p = new P3(33,44,11);
+ 
+
+    public static void main(String args[]) {
+        
+       Zadanie_6 zad = new Zadanie_6();
+       System.out.println(zad.p.a);
+       System.out.println(zad.p.b);
+       System.out.println(zad.p.z);
+    }
+}

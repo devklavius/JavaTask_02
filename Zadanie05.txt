@@ -1,0 +1,64 @@
+    
+    
+public class Zadanie_5 {
+    
+    public class Worker
+    {
+        String imi;
+        String naz;
+        int wiek;
+        
+        Worker(String a)
+        {
+            this.imi = a;
+            this.naz = "Izabelczk";
+            this.wiek = 19;
+        }
+        
+        Worker(String a, String b)
+        {
+            this.imi = a;
+            this.naz = b;
+            this.wiek = 39;
+        }
+        
+        Worker(String a, String b, int w)
+        {
+            this.imi = a;
+            this.naz = b;
+            this.wiek = w;
+        }
+        
+    }
+    
+    public class Firma
+    {
+        Worker p1 = new Worker("Jan");
+        Worker p2 = new Worker("Maciej","Lens");
+        Worker p3 = new Worker("Jerzy","Maciej",22);
+        Worker[] prac = {p1,p2,p3};
+        
+        void show(){
+
+            for(int i = 0; i< this.prac.length; i++)
+            {
+                System.out.println("==========");
+                System.out.println(this.prac[i].imi);
+                System.out.println(this.prac[i].naz);
+                System.out.println(this.prac[i].wiek);
+                 
+            }
+        }
+        
+        
+    }
+    
+    Firma p = new Firma();
+ 
+
+    public static void main(String args[]) {
+        
+       Zadanie_5 zad = new Zadanie_5();
+       zad.p.show();
+    }
+}

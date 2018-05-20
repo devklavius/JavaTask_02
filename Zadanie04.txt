@@ -1,0 +1,65 @@
+    
+    
+public class Zadanie_4 {
+    
+    public class One
+    {
+        int a;
+        int b;
+        
+        One()
+        {
+            this.a = 0;
+            this.b = 0;
+        }
+        
+        int dodaj()
+        {
+            System.out.println("Zwracam INT = " + (this.a + this.b) );
+            
+            return (this.a + this.b);
+        }
+        
+        double dodaj(double u, double c)
+        {
+            System.out.println("Zwracam Double= " + (u+c) );
+            return u+c;
+        }
+        
+        float dodaj(float u, float c)
+        {
+            System.out.println("Zwracam Float= " + (u+c) );
+            return u+c;
+        }
+   
+
+    }
+    
+    class Two
+    {
+        One wcx = new One();
+        
+        Two()
+        {
+            this.wcx.a = 55;
+            this.wcx.b = 33;
+        }
+        
+        void test()
+        {
+            wcx.dodaj();
+            wcx.dodaj(3.4,34.3);
+            wcx.dodaj(3.4f,34.3f);
+        }
+        
+    }
+    
+    Two p = new Two();
+ 
+
+    public static void main(String args[]) {
+        
+       Zadanie_4 zad = new Zadanie_4();
+       zad.p.test();
+    }
+}
